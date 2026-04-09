@@ -1,30 +1,22 @@
-# ModelagemDados
+# 📊 Modelagem de Dados
 
-> [!CAUTION]
-> jhjhjfgfg
->
-> [!TIP]
-> ➡️ **[Clique aqui para baixar o DB Designer na Google Play](https://play.google.com/store/apps/details?id=com.klim.dbdesigner&pcampaignid=web_share)**
+Bem-vindo ao repositório de estudos sobre **Modelagem de Dados** 💡  
+Aqui você encontrará exemplos práticos e materiais complementares sobre o modelo Entidade-Relacionamento.
 
-```mermaid
-flowchart LR
+---
 
-    MEDICO["Médico"]
-    PACIENTE["Paciente"]
-    TIPO_SANGUINEO["Tipo sanguíneo"]
+## 🧩 Exemplos de Entidades
 
-    ATENDIMENTO{"Atendimento"}
-    POSSUI{"Possui"}
+Explore exemplos didáticos de entidades e seus conceitos:
 
-    MEDICO ---|"1, N"| ATENDIMENTO
-    ATENDIMENTO ---|"1, N"| PACIENTE
+👉 [📄 Ver exemplos de Entidades](ModeloEntidadeRelacionamentoI.md)
 
-    PACIENTE ---|"0, N"| POSSUI
-    POSSUI ---|"1, 1"| TIPO_SANGUINEO
+---
 
-    classDef entidade fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000;
-    classDef relacionamento fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#000;
+## 🎥 Vídeo recomendado
 
-    class MEDICO,PACIENTE,TIPO_SANGUINEO entidade;
-    class ATENDIMENTO,POSSUI relacionamento;
-```
+Aprofunde seu conhecimento com este conteúdo:
+
+▶️ [Banco de Dados - Modelo Entidade-Relacionamento (MER) - Parte I: entidades, atributos, chaves](https://www.youtube.com/watch?v=IpFn-KsWPW0)
+
+---
