@@ -1,3 +1,5 @@
+<div style="background-color: white; color: black; padding: 20px;">
+
 ```mermaid
 erDiagram
 
@@ -62,3 +64,5 @@ erDiagram
     style ITEM_PEDIDO fill:#E0F7FA,stroke:#00ACC1,stroke-width:2px,color:#000
     style ENTREGA fill:#FCE4EC,stroke:#D81B60,stroke-width:2px,color:#000
 ```
+
+</DIV>
