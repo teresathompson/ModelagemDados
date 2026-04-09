@@ -1,5 +1,9 @@
 # ModelagemDados
 
+## 📱 Baixe o app
+
+➡️ **[Clique aqui para baixar o DB Designer na Google Play](https://play.google.com/store/apps/details?id=com.klim.dbdesigner&pcampaignid=web_share)**
+
 ```mermaid
 flowchart LR
 
