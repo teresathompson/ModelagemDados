@@ -68,7 +68,7 @@ flowchart LR
     %% ENTIDADES
     MEDICO[Médico] --- ATENDIMENTO{Atendimento}
     PACIENTE[Paciente] --- ATENDIMENTO
-    ATENDIMENTO --> HOSPITAL[Hospital]
+    ATENDIMENTO --- HOSPITAL[Hospital]
 
 
     %% ESTILOS
@@ -89,7 +89,7 @@ flowchart LR
     MINISTRA{Ministra}
 
     %% CONEXÕES
-    PROFESSOR --> MINISTRA -->  DISCIPLINA
+    PROFESSOR --- MINISTRA ---  DISCIPLINA
 
     %% ESTILOS
     classDef entidade fill:#E8F5E9,stroke:#43A047,stroke-width:2px,color:#000;
@@ -97,4 +97,9 @@ flowchart LR
 
     class PROFESSOR,DISCIPLINA entidade;
     class MINISTRA relacionamento;
+```
+
+```mermaid
+flowchart LR
+    VETERINARIO[👩‍⚕️ Veterinário] --- CONSULTA{🩺 Consulta} --- ANIMAL[🐶 Animal]
 ```
