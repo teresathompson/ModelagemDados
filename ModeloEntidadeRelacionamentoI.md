@@ -49,3 +49,52 @@ flowchart LR
     A --> I4
     A --> I5
 ```
+
+## Relacionamentos
+
+- **Médico, Paciente e Hospital** → entidades
+- **Atendimento** → relacionamento
+- O diagrama mostra que:
+  - Um médico atende um paciente
+  - Esse atendimento ocorre em um hospital  
+    <br>
+
+---
+
+```mermaid
+flowchart LR
+
+
+    %% ENTIDADES
+    MEDICO[Médico] --- ATENDIMENTO{Atendimento}
+    PACIENTE[Paciente] --- ATENDIMENTO
+    ATENDIMENTO --> HOSPITAL[Hospital]
+
+
+    %% ESTILOS
+    classDef entidade fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000;
+    classDef relacionamento fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#000;
+
+    class MEDICO,PACIENTE,HOSPITAL entidade;
+    class ATENDIMENTO relacionamento;
+```
+
+```mermaid
+flowchart LR
+    %% ENTIDADES
+    PROFESSOR[Professor]
+    DISCIPLINA[Disciplina]
+
+    %% RELACIONAMENTO
+    MINISTRA{Ministra}
+
+    %% CONEXÕES
+    PROFESSOR --> MINISTRA -->  DISCIPLINA
+
+    %% ESTILOS
+    classDef entidade fill:#E8F5E9,stroke:#43A047,stroke-width:2px,color:#000;
+    classDef relacionamento fill:#FFF8E1,stroke:#F9A825,stroke-width:2px,color:#000;
+
+    class PROFESSOR,DISCIPLINA entidade;
+    class MINISTRA relacionamento;
+```
