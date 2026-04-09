@@ -123,3 +123,44 @@ flowchart LR
     class PESSOA,TELEFONE entidade;
     class POSSUI relacionamento;
 ```
+
+## Cardinalidade: Relacionamento Muitos para Muitos (M:N)
+
+```mermaid
+flowchart LR
+    %% ALUNOS
+    A1[👩‍🎓 Ana]
+    A2[👨‍🎓 Bruno]
+    A3[👩‍🎓 Carla]
+    A4[👨‍🎓 Diego]
+
+    %% DISCIPLINAS
+    D1[📘 Matemática]
+    D2[🧪 Física]
+    D3[🎨 Artes]
+    D4[💻 Programação]
+
+    %% RELACIONAMENTO
+    MATRICULA{📚 Matrícula}
+
+    %% CONEXÕES ALUNOS → RELACIONAMENTO
+    A1 --- MATRICULA
+    A2 --- MATRICULA
+    A3 --- MATRICULA
+    A4 --- MATRICULA
+
+    %% CONEXÕES RELACIONAMENTO → DISCIPLINAS
+    MATRICULA --- D1
+    MATRICULA --- D2
+    MATRICULA --- D3
+    MATRICULA --- D4
+
+    %% ESTILOS
+    classDef aluno fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000;
+    classDef disciplina fill:#E8F5E9,stroke:#43A047,stroke-width:2px,color:#000;
+    classDef relacionamento fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#000;
+
+    class A1,A2,A3,A4 aluno;
+    class D1,D2,D3,D4 disciplina;
+    class MATRICULA relacionamento;
+```
