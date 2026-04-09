@@ -96,3 +96,30 @@ flowchart LR
 flowchart LR
     VETERINARIO[👩‍⚕️ Veterinário] --- CONSULTA{🩺 Consulta} --- ANIMAL[🐶 Animal]
 ```
+
+## Cardinalidade: Relacionamento 1:1 (Um para Um)
+
+Um relacionamento **um para um (1:1)** ocorre quando cada instância de uma entidade está associada a apenas uma instância de outra entidade, e vice-versa.
+
+- Cada **🧑 pessoa** possui **📞 um telefone**
+- Cada **📞 telefone** pertence a **🧑 uma pessoa**
+
+👉 Ou seja:  
+**1 pessoa ⇄ 1 telefone**
+
+> [!CAUTELA]
+> Avalie cada regra de negócios. Hoje em dia cada pessoa pode possuir mais do que um telefone, mas para este exemplo o relacionamento era de 1:1.
+
+### Exemplo: Pessoa e Telefone
+
+```mermaid
+flowchart LR
+    PESSOA[🧑 Vendedor] --- POSSUI{📱 Possui} --- TELEFONE[📞 Telefone]
+
+    %% Estilo
+    classDef entidade fill:#E1F5FE,stroke:#0288D1,stroke-width:2px,color:#000;
+    classDef relacionamento fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#000;
+
+    class PESSOA,TELEFONE entidade;
+    class POSSUI relacionamento;
+```
