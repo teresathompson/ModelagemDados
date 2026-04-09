@@ -107,7 +107,7 @@ Um relacionamento **um para um (1:1)** ocorre quando cada instância de uma enti
 👉 Ou seja:  
 **1 pessoa ⇄ 1 telefone**
 
-> [!CAUTELA]
+> [!CAUTION]
 > Avalie cada regra de negócios. Hoje em dia cada pessoa pode possuir mais do que um telefone, mas para este exemplo o relacionamento era de 1:1.
 
 ### Exemplo: Pessoa e Telefone
