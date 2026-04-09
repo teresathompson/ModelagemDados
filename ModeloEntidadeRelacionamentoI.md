@@ -201,3 +201,53 @@ flowchart LR
     class A1,A2,A3,A4 aluno;
     class REL1,REL2 relacionamento;
 ```
+
+## 🧩 Entidades Fortes e Fracas
+
+### 🔵 Entidade Forte
+
+Uma **entidade forte** é aquela que possui **identificador próprio (chave primária)** e pode existir independentemente de outras entidades.
+
+### 📌 Exemplo: Pessoa
+
+```mermaid
+flowchart LR
+    PESSOA[🧑 Pessoa]
+
+
+    NOME([📝 Nome])
+    CPF([🔑 CPF pode ser o ID])
+    ENDERECO([📍 Endereço])
+
+    %% Decomposição do endereço
+    LOGRADOURO([Rua / Logradouro])
+    NUMERO([Número])
+    BAIRRO([Bairro])
+    CIDADE([Cidade])
+    ESTADO([Estado])
+    CEP([CEP])
+
+    %% Ligações principais
+
+    PESSOA --- NOME
+    PESSOA --- CPF
+    PESSOA --- ENDERECO
+
+    %% Ligações do atributo composto
+    ENDERECO --- LOGRADOURO
+    ENDERECO --- NUMERO
+    ENDERECO --- BAIRRO
+    ENDERECO --- CIDADE
+    ENDERECO --- ESTADO
+    ENDERECO --- CEP
+
+    %% Estilos
+    classDef entidade fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000;
+    classDef atributo fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,color:#000;
+    classDef chave fill:#E8F5E9,stroke:#43A047,stroke-width:3px,color:#000;
+
+    class PESSOA entidade;
+    class NOME,ENDERECO,LOGRADOURO,NUMERO,BAIRRO,CIDADE,ESTADO,CEP atributo;
+    class ID,CPF chave;
+
+```
