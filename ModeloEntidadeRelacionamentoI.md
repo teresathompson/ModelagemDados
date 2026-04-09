@@ -52,14 +52,7 @@ flowchart LR
 
 ## Relacionamentos
 
-- **Médico, Paciente e Hospital** → entidades
-- **Atendimento** → relacionamento
-- O diagrama mostra que:
-  - Um médico atende um paciente
-  - Esse atendimento ocorre em um hospital  
-    <br>
-
----
+<br>
 
 ```mermaid
 flowchart LR
