@@ -214,8 +214,10 @@ Uma **entidade forte** é aquela que possui **identificador próprio (chave prim
 flowchart LR
     PESSOA[🧑 Pessoa]
 
-
     NOME([📝 Nome])
+    NOME_P([PrimeiroNome])
+    SOBRENOME([Sobrenome])
+
     CPF([🔑 CPF pode ser o ID])
     ENDERECO([📍 Endereço])
 
@@ -228,12 +230,15 @@ flowchart LR
     CEP([CEP])
 
     %% Ligações principais
-
     PESSOA --- NOME
     PESSOA --- CPF
     PESSOA --- ENDERECO
 
-    %% Ligações do atributo composto
+    %% Decomposição do nome (atributo composto)
+    NOME --- NOME_P
+    NOME --- SOBRENOME
+
+    %% Ligações do endereço
     ENDERECO --- LOGRADOURO
     ENDERECO --- NUMERO
     ENDERECO --- BAIRRO
@@ -247,9 +252,8 @@ flowchart LR
     classDef chave fill:#E8F5E9,stroke:#43A047,stroke-width:3px,color:#000;
 
     class PESSOA entidade;
-    class NOME,ENDERECO,LOGRADOURO,NUMERO,BAIRRO,CIDADE,ESTADO,CEP atributo;
-    class ID,CPF chave;
-
+    class NOME,NOME_P,SOBRENOME,ENDERECO,LOGRADOURO,NUMERO,BAIRRO,CIDADE,ESTADO,CEP atributo;
+    class CPF chave;
 ```
 
 ## 🔑 Tipos de Chaves (PK e FK)
