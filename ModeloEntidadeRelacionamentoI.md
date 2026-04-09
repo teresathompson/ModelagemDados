@@ -251,3 +251,36 @@ flowchart LR
     class ID,CPF chave;
 
 ```
+
+## 🔑 Tipos de Chaves (PK e FK)
+
+<br>
+
+```mermaid
+erDiagram
+    CLIENTES {
+        int ID_Cliente PK
+        string Nome_Cliente
+        string CPF_Cliente
+        date Data_Nasc
+    }
+
+    VENDAS {
+        int ID_Venda PK
+        int ID_Cliente FK
+        int ID_Produto FK
+        int Quantidade
+        date Data_venda
+    }
+
+    PRODUTOS {
+        int ID_Produto PK
+        string Nome_Prod
+        string Categoria
+        float Preco_Prod
+    }
+
+    %% RELACIONAMENTOS
+    CLIENTES ||--o{ VENDAS : realiza
+    PRODUTOS ||--o{ VENDAS : contem
+```
