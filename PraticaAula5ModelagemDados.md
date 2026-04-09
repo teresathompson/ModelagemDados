@@ -1,6 +1,14 @@
-<div style="background-color: white; color: black; padding: 20px;">
-
 ```mermaid
+%%{init: {
+  "theme": "default",
+  "themeVariables": {
+    "background": "#ffffff",
+    "primaryTextColor": "#000000",
+    "secondaryTextColor": "#000000",
+    "primaryBorderColor": "#333333",
+    "lineColor": "#555555"
+  }
+}}%%
 erDiagram
 
     CLIENTE {
@@ -56,13 +64,10 @@ erDiagram
     CATEGORIA ||--o{ PRODUTO : "🏷️ classifica"
     PEDIDO ||--|| ENTREGA : "🚚 gera"
 
-%% ===================== CORES + TEXTO PRETO =====================
-    style CLIENTE fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px,color:#000
-    style PEDIDO fill:#E8F5E9,stroke:#43A047,stroke-width:2px,color:#000
-    style PRODUTO fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px,color:#000
-    style CATEGORIA fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,color:#000
-    style ITEM_PEDIDO fill:#E0F7FA,stroke:#00ACC1,stroke-width:2px,color:#000
-    style ENTREGA fill:#FCE4EC,stroke:#D81B60,stroke-width:2px,color:#000
+    style CLIENTE fill:#E3F2FD,stroke:#1E88E5,stroke-width:2px
+    style PEDIDO fill:#E8F5E9,stroke:#43A047,stroke-width:2px
+    style PRODUTO fill:#FFF3E0,stroke:#FB8C00,stroke-width:2px
+    style CATEGORIA fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px
+    style ITEM_PEDIDO fill:#E0F7FA,stroke:#00ACC1,stroke-width:2px
+    style ENTREGA fill:#FCE4EC,stroke:#D81B60,stroke-width:2px
 ```
-
-</DIV>
